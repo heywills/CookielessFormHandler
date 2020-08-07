@@ -9,6 +9,7 @@
 		<projectUrl>https://github.com/heywills/CookielessFormHandler</projectUrl>
 		<icon>images\icon.png</icon>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
 		<description>$description$</description>
 		<releaseNotes/>
 		<copyright>2020 Kentico Community</copyright>
