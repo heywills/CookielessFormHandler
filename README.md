@@ -16,8 +16,23 @@ With this solution in place, Kentico reliably runs marketing automation processe
 * Kentico Xperience 12.0.39 or higher
 * Compatible with both Portal Engine and MVC development models
 
-## Warning
-Naturally, Kentico Xperience allows creating a form data record without requiring a site visitor to consent to cookies.  With this module, a contact record will also be created.  To comply with GDPR and CCPA, it is important to obtain a visitor's consent to store and use their data for marketing purposes. This is often accomplished by providing a consent request checkbox on the form.
+## Personal data and consents
+Tracking consent is different than consent to process personal data. Therefore, you can never assume that visitors have consented to processing personal data when they click **allow** in a cookie consent prompt. Additionally, Kentico allows visitors to submit online forms even if they didn't consent to cookies. This is appropriate, because privacy laws typically require separate consents for different purposes. Therefore, it's important to request consent on your online forms. In MVC you can do this by adding the **Consent agreement** form component, and in Portal Engine the **Consent agreement** form control.
+
+The **Cookieless Form Handler** does not add any PII to the system that is not already stored in the Kentico form, so it does not add any compliance challenges. However, it supports copying form data fields to contact fields, and it creates a form submission activity. This information is already in the form data record, including a record of the visitor submitting the form. Additionally, this is what Kentico does automatically if a user has consented to tracking cookies.
+
+Privacy laws do not care whether the PII is stored in a Kentico form data record or in a Kentico contact record, but they do care that the system receives the appropriate consent to use the data and that there is a way to erase the personal data. It is your responsibility to comply with the appropriate regulations whether the data is stored in a form data record or in a contact record.
+
+### Disclaimer
+This readme is provided for informational purposes only and should not be relied upon as legal advice.   Instead, use the information to understand the flow of PII in your system and take appropriate steps to remain compliant with privacy regulations.
+
+### For more information:
+
+[GDPR – Building Consents and Privacy Notices](https://xperience.io/discover/blog/2018-03/gdpr-building-consents-and-privacy-notices)
+
+[Personal data in Kentico](https://docs.kentico.com/k12sp/configuring-kentico/data-protection/gdpr-compliance/personal-data-in-kentico)
+
+
 
 ## Installation
 If you are using the Kentico Xperience MVC development model, install the NuGet package, `KenticoCommunity.CookielessFormHandler` to your MVC project.
