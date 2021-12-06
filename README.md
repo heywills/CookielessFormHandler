@@ -1,5 +1,5 @@
 # Cookieless Form Handler Module for Kentico Xperience
-This module enables using Kentico Xperience online forms without requiring site visitors to consent to cookies.  
+This module enables using Kentico Xperience 12 online forms without requiring site visitors to consent to cookies.  
 ## Background
 Compliance regulations like Europe’s GDPR and California’s CCPA require web sites to request a visitor’s consent before using cookies. However, Xperience requires cookies for its contact management and activity tracking to work. Therefore, if a Kentico site is set up to use a default cookie level less than 200 (i.e. Visitor), it will not track unique visitors using contact management and activity tracking until they provide consent. 
 
@@ -13,8 +13,9 @@ With this solution in place, Kentico reliably runs marketing automation processe
 ## Compatibility
 
 * .NET 4.6.1 or higher
-* Kentico Xperience 12.0.39 or higher
+* Kentico Xperience version 12, with hotfix 39 or above (use KenticoCommunity.CookielessFormHandler 12.0.0.1)
 * Compatible with both Portal Engine and MVC development models
+* Not compatible with Kentico Xperience 13. Instead, use [legitimate interest activity logging](https://xperience.io/discover/blog/marketing-automation-cookies-in-kentico-xperience), available in Xperience 13 Refresh 1
 
 ## Personal data and consents
 Tracking consent is different than consent to process personal data. Therefore, you can never assume that visitors have consented to processing personal data when they click **allow** in a cookie consent prompt. Additionally, Kentico allows visitors to submit online forms even if they didn't consent to cookies. This is appropriate, because privacy laws typically require separate consents for different purposes. Therefore, it's important to request consent on your online forms. In MVC you can do this by adding the **Consent agreement** form component, and in Portal Engine the **Consent agreement** form control.
